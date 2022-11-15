@@ -50,6 +50,17 @@ function countMostCommonWords (array, text) {
   });
 }
 
+function firstInstanceOfWord(word, text) {
+  const textArray = text.split(" ");
+  for (let i = 0; i < textArray.length; i++) {
+    console.log(i);
+    if (word === textArray[i]) {
+      return i;
+    }
+  }
+  return -1;
+}
+
 function omitBadWords(array, text) {
   if (isEmpty(array)) {
     return 0;
