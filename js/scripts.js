@@ -1,6 +1,12 @@
 //Utility Logic
-function isEmpty(testString) {
-  return (testString.trim().length === 0);
+function isEmpty() {
+  for (let i=0; i < arguments.length; i++) {
+    console.log(arguments[i]);
+    if (arguments[i].trim().length === 0) {
+      return true;
+    }
+  } 
+  return false;
 }
 
 
@@ -91,7 +97,7 @@ function omitBadWords(array, text) {
 //UI Logic
 
 function boldPassage(word, text) {
-  if (isEmpty(word) || isEmpty(text)) {
+  if (isEmpty(word, text)) {
     return null;
   }
   const p = document.createElement("p");
